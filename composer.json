@@ -1,0 +1,46 @@
+{
+    "name": "snono/report-builder",
+    "type": "library",
+    "description": "Generate PDF Report for laravel design by snono systems",
+    "homepage": "https://github.com/dompdf/dompdf",
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Yaser Ghanawi",
+            "email": "yaser@snono-systems.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Snono\\ReportBuilder\\" : "src/"
+        },
+        "classmap" : ["lib/"]
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "ext-gd": "*",
+        "ext-dom": "*",
+        "ext-mbstring": "*",
+        "phenx/php-font-lib": "0.5.*",
+        "phenx/php-svg-lib": "0.3.*",
+        "ext-bcmath": "*",
+        "illuminate/support": "5.*",
+        "illuminate/view": "5.*",
+        "nesbot/carbon": "^1.22"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Snono\\ReportBuilder\\Builder\\InvoicesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
